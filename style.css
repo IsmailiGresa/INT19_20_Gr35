@@ -231,4 +231,119 @@ abbr[title] {
   text-decoration: none;
 }
 
+.wrapper ul {list-style-type:"\00BB";
+        color:#FFC300;
 
+    }
+   footer{
+           
+            background-color:#222;
+ 
+    border:50px solid rgba(0,0,0,0);
+            display: inline-block;
+
+       
+     top:65em;
+     position:relative;
+     
+
+
+           
+           
+               }
+
+        div.wrappper
+{
+  float: left;
+  width: 21em;
+
+}
+             
+hr {
+  display: block;
+  position: absolute;
+   
+    right: 0;
+    margin-bottom:0px;
+ border-width: 1px;
+ left:0;
+}
+ .last{
+color:grey;
+left:0;
+ 
+   position:absolute;}
+ .last1{
+    color:grey;
+   font-size:-1em;
+ right:0;
+
+   position:absolute;}
+  .wrapper  li a{ color:#FFC300;
+     text-decoration: none;
+
+ 
+ }
+ .wrapper li a:hover{
+    color:grey;
+ }
+.tab1{
+ 
+  width:65%;
+ 
+}
+td{
+  padding: 0px;
+}
+
+
+
+.imp{
+  color:#800000;
+  font:bold;
+}
+.new{color:#800000;
+  font-weight:bold;
+
+}
+.neww a{
+color:#FFC300;
+     text-decoration: none;
+}
+.neww a:hover{
+ 
+    color:grey;
+ }
+h2 {  background:  #ffeead;  padding: 15px; border-radius: 20px ; text-align: left;color:#800000;}
+.h2 {  background:  #ffeead;  padding: 15px; border-radius: 20px ;text-align: left;color:#800000;}
+.tab2{ width:100%;}
+
+.figcaption{
+
+  color:#800000;
+  font-weight:bold;
+}
+
+.fotob {
+  position: absolute;
+  width:100px;
+  height:100px;
+  right:26.2em;
+  top:40.8em;
+
+
+}
+.butonif {
+   width:150px;
+  height:100px;
+position:absolute;
+  right:9em;
+  top:16.6em;
+  background-color:#D7C2AF;
+  border:none;
+  color:#752A16;
+  font-family: serif;
+ 
+  font-size: 30px;
+
+}
