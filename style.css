@@ -323,7 +323,12 @@ h2 {  background:  #ffeead;  padding: 15px; border-radius: 20px ; text-align: le
   color:#800000;
   font-weight:bold;
 }
+.pjesa2  {
+  position: absolute;
+  top:75em;
 
+
+}
 .fotob {
   position: absolute;
   width:100px;
@@ -347,3 +352,13 @@ position:absolute;
   font-size: 30px;
 
 }
+.pjesa1{
+  position: absolute;
+  top:52em;
+ 
+}
+abbr[title] {
+  border-bottom: none;
+  text-decoration: none;
+}
+
