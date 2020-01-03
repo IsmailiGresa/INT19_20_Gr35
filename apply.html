@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<head>
+<html lang="en" >
+<meta charset="UTF-8">
+  <title>Slide Contact Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ <style>
+  body{margin:0;
+    padding:0;
+    font-family:sans-serif;
+    background-color:white;}
+    .btn-standart{
+  color: white;
+  position: relative;
+  
+  padding: 1em 2em;
+  font-size: 16px;
+  font-weight: 600;
+  
+  box-shadow: 0 8px 0 0 #3d9ec4;
+  border: 0px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-standart:active{
+  box-shadow: none;
+  top: 10px;
+  margin-bottom: o;
+}
+.blau:hover{
+  background-color:#4bc7e8;
+}
+.blau {
+  background-color:#4bbce8;
+}
+
+.container{
+    position: relative;
+}
+
+
+    .banner
+    {
+      width:100%;
+      height:100vh;
+      background:url(sst.jpg);
+      background-size:cover;
+      background-attachment:fixed;
+    }.contact{
+      padding:50px 100px;
+
+    }
+    .contact h2
+    {margin :0 0 20px;
+      padding: 0;
+         font-size: 30px;}
+      .contact p{
+        font-size:18px;
+      }
+     
+
+.button { 
+  display: inline-block; 
+  padding: 20px 40px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  vertical-align: middle;
+  font-family: 'Rubik One', sans-serif;
+  text-decoration: none;
+  font-size: 4vw;
+  transition: all .5s;
+  background-color: #3498db;
+
+  }
+
+      .sidebar-contact{
+        position: fixed;
+        top:50%;
+        left:-350px;
+        transform: translateY(-50%);
+        width:350px;
+        height:auto;
+        padding: 40px;
+        background: #fff;
+        box-shadow: 0 20px 50px rgba(0,0,0,.5);
+        box-sizing: border-box;
+ transition: 0.5s
+      }
+      .sidebar-contact.active{
+left:0px;
+
+      }
+       .sidebar-contact input,
+        .sidebar-contact textarea
+       {
+        width:100%;
+        height:36px ;
+        padding: 5px;
+        margin-bottom: 10px;
+        border:1px solid rgba(0,0,0,.5);
+         box-sizing: border-box;
+          outline:none;
+       }
+       .sidebar-contact h2{margin: 0 0 20px;
+        padding:0;
+
+       }
+  .sidebar-contact textarea {
+    height:60px;
+    resize:none;
+
+  }
+      
+  input[type="submit"]{
+   background: #FF6347; 
+   color:white; 
+   cursor:pointer;
+   border:none;
+   font-style: 18px;
+   padding:7px;
+   width:120px;
+border-width:5px;
+border-color: black;
+  }
+  .toggle
+{
+  position:absolute;
+  top: 0;
+  right:-48px;
+  width:48px;
+  height:48px;
+  text-align: center;
+  cursor:pointer;
+  line-height:48px;
+  background: #f00;
+}
+  .toggle:before{
+    content:'\f003';
+    font-family:fontAwesome;
+color:#fff;
+font-size:18px;
+  }
+.toggle.active:before{
+    content:'\f00d';
+}
+
+.hv{
+  font-size:70px;
+  color:#f00;
+  font-weight: bolder;
+  font-family: Papyrus;
+
+}
+.p1{
+  font-style:italic;
+
+font-weight: bold;
+
+}
+.p2{
+font-family: papyrus;
+
+   color:#f00;
+  font-weight: bold ;
+
+}
+dl,dt,p{
+  color:grey;
+  font-weight: bold ;
+
+}
+ol li{ float:right;
+   width:78%;
+   font-weight: bold;
+   
+   color:grey;}
+  
+  .p3 {
+    float:right;
+   width:75%;
+   font-weight: bold;
+   padding:15px;
+  }
+  .p4 {
+    float:right;
+   width:65%;
+   font-weight: bold;
+  }
+  mark {
+  background: red;
+  color: white;
+}
+h2{
+   background: linear-gradient(180deg,rgba(255,255,255,255) 0%, #FFD0AE 50%);
+}
+</style>
+</head>
+<body> 
+ <div class="sidebar-contact">
+ <div class="toggle"></div>
+ <h3>APPLY</h3>
+ <form>
+  <input type="text"name="" placeholder="Name">
+  <input type="text"name="" placeholder="Surname">
+  <input type="email"name="" placeholder="Email">
+    <input type="rel"name="" placeholder="Phone Number">
+      <input type="date"name=""placeholder="Date of birth">
+      <input type="text"name="" placeholder="High School">
+    
+<select>          <option value="">Gender</option>
+            <option value="">Female</option>
+            <option value="">Male</option>
+          </select><br>
+</br>
+     <input type="rel"name="" placeholder="Average grade">
+     
+
+   
+     <div class="container">
+<button class="btn-standart blau">Send</button>  
+ 
+ </div>
+   
+    </form>
+  </div>
+  <div class="banner"></div>
+  <div class ="content"></div>
+  <p class="hv"> Education Center</p>
+
+  <p class="p1">Welcome to our Education Centre,we are so happy to see you here.</p>
+  <p class="p1">We are working hard for this Centre since 1970</p>
+  <p class="p1">We have so many opportunities for you:</p>
+
+  <h2> -Affordability- </h2>
+ 
+
+<p>Our financial aid program makes Education Centre affordable for every family throughout the world. Our aid packages require no loans, no contribution from families with incomes $65,000 or less.
+ <dl>
+      <dt>Families with incomes between $65,000 and $150,000</dt>
+      <dd>-Will contribute from 0-10% of their income </dd>
+      <dt>Those with incomes above $150,000</dt>
+      <dd>-Will be asked to pay proportionately more than 10%, based on their individual circumstances</dd>
+    </dl></p>
+<input type="submit" name="" value=" »click for more">
+<h2>-Academics-</h2>
+<p>Academics is a leading national academic jobs agency, specialising in the recruitment of permanent, long term and daily supply teacher jobs and education support staff for vacancies Further Education establishments. We also have a dedicated team who work with both Mainstream and Specialist schools for Special Educational Needs.
+
+Our experienced teams of consultants, in offices throughout the UK have a combination of education and private sector knowledge that has established Academics’ reputation as one of the country’s leading and most professional agencies within education, academic and teacher recruitment.
+
+Our dedication to ‘Delivering Continuity in the Classroom’ has promoted the development of strong partnerships with schools and colleges throughout the UK and internationally.
+  An education at Education Center has limitless possibilities. Our more than 3,700 courses, taught by esteemed faculty members and enhanced by Harvard’s unparalleled libraries and resources, will take you as far as your imagination allows.
+</p>
+<input type="submit" name="" value=" »click for more">
+<h2>-Students-</h2>
+<h4>A community designed to support and inspire you</h4>
+<p class="p3">From a specially designed first year in Education Center Yard through your upper-level years in the iconic Houses, you will be welcomed into a world of rich traditions in the unique and cosmopolitan environment of Boston, “America’s college town.”
+Over 4,000 projects have been made available online, including architectural drawings, models, sketches and project descriptions.The archive contains a number of designs created by students who went on to become notable architects including Libeskind and Ricardo Scofidio, co-founder of Diller Scofidio + Renfro. Scofidio tutored his now partner Diller while she studied at the school..In Our School learnt students that now are the best professors like:<ol>
+<li> Douglas Klutz</li>
+<li>John Beyers</li>
+<li>Rona Miles</li>
+
+</ol>
+
+</p>
+
+
+<video width="300" height="200" controls>
+
+    <source src="video2.mp4" type="video/mp4" alt="Design of our School made by students">
+
+    </video>
+   
+<h2>-Great Staff-</h2>
+<p class="p4">A good education is key to future growth and prosperity. And to receive a good education, you need great teachers. Great teachers provide their students with the tools to open the doorways to hundreds of different career paths. Teaching is more than just a job. It is a calling. To be effective educators, teachers themselves need a solid education. It needs to harness not only traditional methods but also utilize forward-thinking theories and cutting-edge technology.
+
+Teaching requires a commitment, not only of time and energy, but also of spirit. There are certain benefits to a career in education, but it certainly appeals to very specific people. That means a few things: Firstly, there will always be a demand for educators. Secondly, every country wants more teachers, meaning that you can live in practically any nation you choose! Thirdly, it's an incredibly diverse profession; you can teach any subject, from English to math to media studies.
+
+But education is still competitive. Like so many other professions, you want the best training so that you can land a place in a great school. So what can you do to get that perfect teaching job?.
+If you are an aspiring or existing teacher, it is essential that you are aware of your options when it comes to getting your first teaching degree or advancing your teaching career with a graduate degree. Since all teaching degree programs are not created equal, our mission is to assist you in sorting through the thousands of options available nationwide and present you with the best teaching degree programs in a wide variety of specialty areas, including early childhood education, elementary education, special education, secondary education, and physical education. In your quest to become an educator of young minds, we will provide comprehensive resource guides for teachers and education majors to ensure you reach your dreams of making a difference in the lives of countless children.
+ An education at Education Center has limitless possibilities. Our more than 3,700 courses, taught by esteemed faculty members and enhanced by Harvard’s unparalleled libraries and resources, will take you as far as your imagination allows.
+: Although just established in 2007, The Education Centre has quickly grown into being a national leader in the education field through its transformative research and teaching innovation. With a vibrant community of scholars and around 1,200 students annually, the School is well-known for having more federally funded research than any other graduate school of education in the United States. Currently ranked as the nation’s #1 best graduate education school by the U.S. News and World Report, JHU offers master’s and doctoral degrees as well as graduate certificate programs focused on today’s most pressing needs in P-12 school systems. Students can also pursue a Master of Science in Education (M.S.Ed.) or Doctor of Education (Ed.D.) fully online
+
+<input type="submit" name="" value=" »click for more">
+<h3>For more watch the video :</h3>
+</p>
+ <video width="400" height="400" controls>
+
+    <source src="video.mp4" type="video/mp4" alt="Video of Education Centre">
+
+    </video>
+
+ 
+<p class="p2">If you want to a part of us APPLY</p>
+<p class="p2">We would like to have you as a student.Thank YOU!</p>
+</div>
+<script 
+  src="https://code.jquery.com/jquery-3.4.1.js">
+  </script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.toggle').click(function(){
+      $('.sidebar-contact').toggleClass('active')
+      $('.toggle').toggleClass('active')
+    })
+  })
+</script>
+</body>
+</html>
