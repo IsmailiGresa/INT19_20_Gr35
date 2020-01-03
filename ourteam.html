@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<meta charset="utf-8"/>
+<meta name="viewreport" content="width=device-width">
+
+<head>
+	
+	
+
+    <title>Our Team</title>
+    <script type="text/javascript">
+
+        var i=0;
+       var photo=new Array();
+        photo[0]="images/s.jpg";
+        photo[1]="images/ki.jpg";
+        photo[2]="images/m.jpg";
+
+
+          function swapimage (){
+
+            document.slide.src=photo[i];
+
+            if (i<photo.length-1)
+
+                i++;
+
+            else
+
+                i=0;
+
+            setTimeout("swapimage()",1000);
+
+        }
+    
+        window.onload=swapimage;
+    </script>
+
+    	    
+    	    
+    	
+    	    <style type="text/css">
+    	
+    	        body{
+    	)
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+        .box{
+             position: absolute;
+             top:0;
+            width:100%;
+            height: 100%;
+            left:0;
+            z-index: -1;
+
+        }
+        * {
+	margin:0;
+	padding:0;
+	
+}
+body {
+	width:100%;
+	background-color: #000;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	
+
+
+}
+.team-section {
+	overflow:hidden;
+	text-align:center;
+	
+	padding:60px;
+}
+.team-section h1 {
+	text-transform: uppercase;
+	margin-bottom: 60px;
+	color:white;
+	font-size:40px;
+}
