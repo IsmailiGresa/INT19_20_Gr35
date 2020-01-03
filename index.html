@@ -2,7 +2,8 @@
   <html lang="en">
   <head>
   <meta charset="utf-8"/>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="viewreport" content="width=device-width">
+   <link rel="stylesheet" type="text/css" href="style.css">
   <title>Welcome|Education Centre</title>
   </head>
   <body>
@@ -47,7 +48,7 @@
    <div class="lista1">
    <ul>
    <li><a href="#home">|   Homepage    |</a></li>
-   <li><a href="#styledemo">   Style Demo     |</a></li>
+   <li><a href="aboutus.html"  target="_blank">   Our Team     |</a></li>
    <li><a href="#fullwidth">   Full Width   |</a></li>
    <li><a href="#Dropdown">    Dropdown      |</a></li>
    <li><a href="#Portfolio">   Portfolio    |</a></li>
@@ -62,15 +63,15 @@
    <img class="slides" src="images/foto4.jpg" />
    <img class="slides" src="images/foto5.jpg" />
    <form>
-   <input type="submit" name="submit" class="buttonn" value="Continue Reading »">
-   <input type="submit" name="submit" class="butonaat" value="1">
-   <input type="submit" name="submit" class="butonaat" value="2">
-   <input type="submit" name="submit" class="butonaat" value="3">
-   <input type="submit" name="submit" class="butonaat" value="4">
-   <input type="submit" name="submit" class="butonaat" value="5">
+    <input type="submit" name="text" class="buttonn"  value="Continue Reading »">
+    <input type="button"  class="butonaat" onclick="currentSlide(1)" id="btn1"value="1">
+    <input type="button"  class="butonaat" onclick="currentSlide(2)" id="btn2"value="2">
+    <input type="button"  class="butonaat" onclick="currentSlide(3)" id="btn3"value="3">
+    <input type="button" class="butonaat" onclick="currentSlide(4)" id="btn4"value="4">
+    <input type="button"  class="butonaat" onclick="currentSlide(5)" id="btn5"value="5">
    
 
-   </form>
+</form>
    </div>
  
    <div class=" video">
@@ -283,4 +284,50 @@
 </footer>
 </div>
    </body>
+<script>
+    var slideIndex = 1;
+
+showSlide(slideIndex);
+
+
+   function currentSlide(n) {
+
+showSlide(slideIndex = n);
+
+}
+
+
+function showSlide(n){
+
+var i;
+
+var slides = document.getElementsByClassName("slides");
+
+var dots = document.getElementsByClassName("butonaat");
+
+if (n > slides.length) { slideIndex = 1};
+
+if (n < 1) { slideIndex = slides.length};
+
+for (i=0;i<slides.length;i++) {
+
+slides[i].style.display = "none";
+
+};
+
+for (i=0;i<dots.length;i++) {
+
+dots[i].className = dots[i].className.replace(" active","");
+
+};
+
+slides[slideIndex-1].style.display = "block";
+
+dots[slideIndex-1].className += " active";
+
+}
+
+
+
+</script>
    </html>
