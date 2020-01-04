@@ -3,7 +3,7 @@
 <html lang="en">
 <meta charset="utf-8"/>
 <meta name="viewreport" content="width=device-width">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <head>
 	
 	
@@ -201,6 +201,20 @@ p {
 
 
 <img class="box" name="slide" src="images/1.jpg">
+		<h3 style="text-align:center; color:white;" id="hidden">I was hidden!</h3>
+
+<script>
+
+	$(document).ready(function(){
+  $("#hidden").hover(function(){
+  	$(this).css("color","black");
+  },
+  function(){
+   $(this).hide();
+  });
+	});
+
+    </script>
 
 </body>
 
