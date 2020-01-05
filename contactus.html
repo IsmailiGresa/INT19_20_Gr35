@@ -1,63 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="stylea.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<link href="https://ip-api.io">
 
 
+<style>
+* {
+	margin:0;
+	padding:0;
+	text-decoration:none;
+	font-family:"montserrat";
+}
+body{
+	background:#06133E;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
+h1{
+	color:white;
+	font-family:serif;
+	font-size:60px;
+	position: absolute;
+    left:11em;
+    top:0.4em;
+}
+.middle {
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+.card {
+	
+	width:340px;
+	height:480px;
+}
+.front,.back {
+	width:100%;
+	height:100%;
+	
+	backface-visibility: hidden;
+	position: absolute;
+	transition: transform .6s linear;
+}
+.front img {
+	height:100%;
+}
+.front{
+	transform:perspective(600px) rotateY(0deg);
+}
+.back {
+	background:#f1f1f1;
+	transform:perspective(600px) rotateY(180deg);
+}
 .back-content{
 color:#2c3e50;
 text-align: center;
@@ -99,15 +99,15 @@ background-color: #06133E;
 }
 
 
+	</style>
+</head>
+<body>
+	<h1>Contact Us</h1>
+<div class="card middle" style="color:black">
+	<div class="front">
+		<img src="images/j2.png" alt="">
 
-
-
-
-
-
-
-
-
+	</div>
 
 <div class="back">
 <div class="back-content middle">
@@ -116,23 +116,23 @@ background-color: #06133E;
 <div class="sm">
 <a href="#"><i class="fab fa-facebook-fab"></i></a>
 <a href="#"><i class="far fa-envelope"></i></a>
+<a href="#"><i class="fab fa-youtube"></i></a>
+				<a href="#"><i class="fab fa-instagram"></i></a>
+	</div>
+</div>
+<div id="wrapper">
 
+  <button id="location-button">Where are we?</button>
+  <div id="output"></div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     $.get("https://maps.googleapis.com/maps/api/geocode/json?&latlng="+position.coords.latitude +","+position.coords.longitude +"&sensor=false",function(data){
+   
+  </div>
+  <script >
+  $('#location-button').click(function(){
+    if(navigator.geolocation)
+      navigator.geolocation.getCurrentPosition(function(position){
+        console.log(position);
+  $.get("https://maps.googleapis.com/maps/api/geocode/json?&latlng="+position.coords.latitude +","+position.coords.longitude +"&sensor=false",function(data){
           console.log(data);
       });
       })
@@ -144,3 +144,4 @@ background-color: #06133E;
 
 
 </body>
+     </html>
