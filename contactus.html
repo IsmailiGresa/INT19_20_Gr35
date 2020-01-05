@@ -96,7 +96,16 @@ color:white;
 font-size: 20px;
 border-style:solid;
 background-color: #06133E;
-}
+} #daate{
+  color:white;
+  font-size:15px;
+  position: absolute;
+  font-family:Papyrus;
+  float:bottom;
+  bottom:0;
+  right:0px;
+  color:#06133E;;
+ }
 
 
 	</style>
@@ -141,6 +150,12 @@ background-color: #06133E;
 
 });
 </script>
+	<p id="daate"></p>
+<script>
+var date = new Date(2019,11,10,31,23,23);
+document.getElementById("daate").innerHTML = date.toDateString();
+</script>
+
 
 
 </body>
