@@ -155,6 +155,21 @@ p {
 }
 
     </style>
+	<style>
+  .button {
+    
+    background-color: black;
+    color:black;
+    border-radius:40%;
+    border-color: black;
+    position: absolute;
+    float:bottom;
+    outline-width: 4px;
+    outline-style: dashed;
+    outline-color: black;
+    outline-offset: 2px;
+  }
+  </style>
 
 </head>
 
@@ -202,6 +217,7 @@ p {
 
 <img class="box" name="slide" src="images/1.jpg">
 		<h3 style="text-align:center; color:white;" id="hidden">I was hidden!</h3>
+		<button class="button">Hide</button>
 
 <script>
 
@@ -215,6 +231,17 @@ p {
 	});
 
     </script>
+		 <script>
+  //callback function
+  $(document).ready(function()
+  {
+    $("button").click(function() {
+      $("div").hide(5000,function(){
+        alert("The paragraph is now hidden");
+      });
+    });
+  });
+</script>
 
 </body>
 
