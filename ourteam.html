@@ -59,6 +59,11 @@
             z-index: -1;
 
         }
+         #daate{
+          position: relative;
+          float: right;
+          bottom: 0px;
+        }
 	</style>
 	<style>
         * {
@@ -245,6 +250,14 @@ p {
       });
     });
   });
+</script>
+		  <p id="daate"></p>
+ 
+<script>
+var date = new Date(2019,11,10,12,32,24,25);
+
+
+document.getElementById("daate").innerHTML = date.toDateString();
 </script>
 
 </body>
