@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <title>Login - Education Centre</title>
+    <style>
+      body{
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: rgb(240, 236, 229);
+}
+.frnt input{
+  float: right;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+.login-box{
+	width: 280px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.frnt canvas{
+  margin: 0 0 0 auto;
+}
+
+  .h1{
+    position: relative;
+    width: 20%;
+    height: 7rem;
+    margin-top: 0%;
+    margin-left: 0%;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-left: 20%;
+    padding-right: 70%;
+    padding-top: 2%;
+    background-color: brown;
+    color: #fff;
+  }
+  .prg p{
+    text-align: center;
+  }
+  .user{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  .pass{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: medium;
+    font-size: large;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  }
+  .st{
+    background-color: brown;
+  }
+  .st ul{
+   list-style-type: none;
+   align-items: center;
+   text-align: center;
+  }
+  .st li{
+    display: inline-block;
+  }
+  .st a{
+    padding-left: 5px 20px;
+    color: #fff;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: 10 10 10;
+  }
+  .st a :hover{
+    background-color: bisque;
+    color:rgb(83, 13, 13);
+    }
+  .info{
+    background-color: brown;
+  }
+  .info ul{
+   list-style-type: none;
+   align-items: center;
+   text-align: center;
+  }
+  .info li{
+    display: inline-block;
+    color: #fff;
+  }
+  .info a{
+    color: #fff;
+    padding-left: 5px 20px;
+    font-size: small;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: 10 10 10;
+  }
+  .info a :hover{
+    background-color: bisque;
+    color:rgb(83, 13, 13);
+    }
+  .cnt ul{
+   list-style-type: none;
+   align-items: center;
+   text-align: left;
+  }
+  .cnt li{
+    display: inline-block;
+    color: #fff;
+  }
+  .cnt a{
+    padding-left: 5px 20px;
+    color: #fff;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: 10 10 10;
+  }
+  .cnt a :hover{
+    background-color: bisque;
+    color:rgb(83, 13, 13);
+    }
+    .ed{
+    margin-top: 40px;
+    margin-bottom: 40px;;
+    text-align: center;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: brown;
+    color: white;  
+    }
+  .log-btn{
+    width: 100%;
+    color: #fff;
+    padding: 5px;
+    font-size: 18;
+    cursor: pointer;
+    text-align: center;
+    }
+  .prob{
+    margin-top: 20px;
+    text-align: center;
+    color: black;
+  }
+  .bot{
+    background-color: brown;
+  }
+  .quote{
+    font-size:x-large;
+    color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+  }
+    </style>
+    <body>
+      <div class="frnt">
+        <svg width="330" height="192">
+          <rect x="50" y="20" rx="20" ry="20" width="184" height="170"
+          style="fill:rgb(109, 21, 9);stroke-width:2;stroke:rgb(83, 13, 13)" />
+          <text fill="white" font-size="40" font-style="bold" font-family="Lucida Sans" x="60" y="100">Education</text>
+          <text fill="white" font-size="40" font-style="bold" font-family="Lucida Sans" x="60" y="140">Centre</text>
+        </svg>
+        <a class="root" href="">Education Centre</a>
+        <span>/</span>
+        <a class="last" href="" title="Login">Login</a>
+        <input type="submit" name="submit" class="submit" value="SEARCH">
+      <input type="text" name="text" class="search">
+      </div>
+    <div class="h1">
+      <h1>Login</h1>
+    </div>
+    <section>
+       <div class="prg">        
+      <p>Login with your Education Centre username and password.</p>
+       </div>
+      <form action="" method="post" autocomplete="off">
+
+      <div id="errorMessage" class="form-error" role="alert" aria-atomic="true" >
+      </div>
+      <fieldset>				
+      <div class="user">
+      <label for="usernameInput" data-required="true">Username:</label><br>
+      <input id="usernameInput" aria-required="true" name="username" type="text" 
+      autofocus="autofocus" autocapitalize="off" autocorrect="false" spellcheck="false" />
+      </div>
+
+      <div class="pass">
+      <label for="passwordInput" data-required="true">Password:</label><br/>
+      <input id="passwordInput" aria-required="true" name="password" type="password"/>
+    </div>
+      </fieldset>
+
+      <div class="log-btn">
+      <button type="submit" value="Login" class="button cta">LOGIN</button>
+      </div>
+
+      <div class="prob">
+      <a href="" target="_self"> Problems logging in Staff? </a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="" target="_self"> Problems logging in Student? </a>
+      </div>											
+
+      <input type="hidden" name="" value="">
+      <input type="hidden" name="" value="">
+      </form>
+
+      <div id="guestLibrary">
+      <p>
+      Are you a library member who is not a Education Centre student or staff?
+      <a href="" class="btn" target="_self">Login as guest.</a>
+      </p>
+      </div>
+
+      <div id="noticeMessage">
+      </div>
+      </section>
+      </div>	
+  </div>
+</div>
+
+<script type="text/javascript">
+if ( "0" != "0" ) {
+      document.getElementById('usernameInput').style.border = '2px solid #FF0000';
+      document.getElementById('passwordInput').style.border = '2px solid #FF0000';
+      document.getElementById('errorMessage').style.display = 'block';
+}
+else {
+      document.getElementById('usernameInput').style.border = '1px solid #D3D3D3';
+      document.getElementById('passwordInput').style.border = '1px solid #D3D3D3';
+      document.getElementById('errorMessage').style.display = 'none';
+}
+
+if ( "0" != "0" ) {
+      document.getElementById('guestLibrary').style.display = 'block';
+}
+else {
+      document.getElementById('guestLibrary').style.display = 'none';
+}
+
+if ( "0" != "0" ) {
+      document.getElementById('noticeMessage').style.display = 'block';
+}
+else {
+      document.getElementById('noticeMessage').style.display = 'none';
+}
+</script>
+<div class="bot">
+<div class="ed">
+  <hr/>
+  <p>Education Centre</p>
+<hr/>
+</div>
+<div class="st">
+  <ul>
+    <li><a href="">CURRENT STUDENTS</a></li>
+    <li><a href="">STAFF</a></li>
+    <li><a href="">ALMUNI</a></li>
+    </ul>
+</div>
+<hr/>
+<div class="info">
+  <ul>
+    <li><a href="img/icons8-university-48.png">FACULTIES AND GRADUATE SCHOOLS</a></li>
+    <img src="img/icons8-university-48.png">
+
+    <li><a href="img/icons8-library-48.png">LIBRARY</a></li>
+    <img src="img/icons8-library-48.png">
+    <li><a href="img/icons8-call-48.png">CONTACT US</a></li>
+    <img src="img/icons8-call-48.png">
+    <li><a href="img/icons8-map-pinpoint-48.png">MAPS</a></li>
+    <img src="img/icons8-map-pinpoint-48.png">
+    <li><a href="img/iconsA8-donate-48.png">SUPPORT THE CAMPAIGN</a></li> 
+    <img src="img/icons8-donate-48.png">
+    <li><a href="img/icons8-job-seeker-48.png">JOBS</a></li> 
+    <img src="img/icons8-job-seeker-48.png">
+    </ul>
+</div>
+<hr/>
+<div class="quote">
+<p>The whole purpose of education is to turn mirrors into windows!</p>
+</div>
+<hr/>
+<div class="cnt">
+  <ul>
+    <li><a href="">Emergency Information</a></li>
+    <li><a href="">Disclaimer & Copyright</a></li>
+    <li><a href="">Accessibility</a></li>
+    <li><a href="">Privacy</a></li>
+    <li><a href="img/icons8-facebook-48.png"></a></li> 
+    <img src="img/icons8-facebook-48.png">
+    <li><a href="img/icons8-twitter-48.png"></a></li> 
+    <img src="img/icons8-twitter-48.png">
+    <li><a href="img/icons8-linkedin-circled-48.png"></a></li> 
+    <img src="img/icons8-linkedin-circled-48.png">
+    </ul>
+</div>
+</div>
+    </body>
+
+</html>
+
+
