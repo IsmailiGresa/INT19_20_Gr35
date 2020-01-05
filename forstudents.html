@@ -298,3 +298,306 @@ ev.target.appendChild(document.getElementById(data));
 
 </div>
 <div class="drag">
+  <p>Drag image:</p>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<img id="drag1" src="images/math1.jpg" draggable="true" ondragstart="drag(event)" width="250" height="150">
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+  <div class="d5"><h3>Score Keeper App</h3>
+  <p></p>
+  <h1><span id="p1Display">0</span> to <span id="p2Display">0</span></h1>
+ 
+  <p><strong>Playing to:</strong><span id="numPlays"></span></p>
+  <input type="number" id="gameScore" value="" >
+ 
+  <button id="p1" class="btn btn-primary">Player One</button>
+  <button id="p2" class="btn btn-primary">Player Two</button>
+  <button id="reset" class="btn btn-danger">Reset Scores</button>
+</script>
+
+  <script type="text/javascript">
+  var p1btn = document.querySelector("#p1");
+var p2btn = document.querySelector("#p2");
+var resetbtn = document.querySelector("#reset");
+var p1Display = document.getElementById("p1Display");
+var p2Display = document.getElementById("p2Display");
+var numInput = document.querySelector("#gameScore");
+var numPlays = document.querySelector("p span");
+var p1score = 0;
+var p2score =0;
+var gameOver = false;
+var winningScore =5;
+
+
+p1btn.addEventListener("click",function(){
+  if(!gameOver){
+  p1score++;
+}
+    if(p1score === winningScore){
+      p1Display.classList.add("winner");
+      gameOver = true;
+    }
+   p1Display.textContent = p1score;
+
+});
+
+p2btn.addEventListener("click",function(){
+  if(!gameOver){
+    p2score++;
+}
+    if(p2score === winningScore){
+      p2Display.classList.add("winner");
+      gameOver = true;
+    }
+    p2Display.textContent = p2score;
+});
+
+resetbtn.addEventListener("click",function(){
+    reset();
+});
+
+numInput.addEventListener("change",function(){
+numPlays.textContent = this.value;
+winningScore = Number(this.value);
+reset();
+});
+
+function reset(){
+   p1score = 0;
+     p2score =0;
+     p1Display.textContent=p1score;
+     p2Display.textContent=p2score;
+     p1Display.classList.remove("winner");   p2Display.classList.remove("winner");
+     gameOver=false;
+  numPlays.textContent="";
+  numInput.textContent="";
+}
+
+//console.log(numPlays);
+  </script>
+
+
+   
+<p>Please input a number between 10 and 20:</p>
+
+<input id="number">
+<button type="button"id="buton" onclick="myFunction()">Test Input</button>
+<p id="p01"></p>
+<script>
+function myFunction() {
+  var message, x;
+  message = document.getElementById("p01");
+  message.innerHTML = "";
+  x = document.getElementById("number").value;
+  try {
+    if(x == "") throw "is empty";
+    if(isNaN(x)) throw "is not a number";
+    x = Number(x);
+    if(x > 20) throw "is too high";
+    if(x < 10) throw "is too low";
+  }
+  catch(err) {
+    message.innerHTML = "Error: " + err + ".";
+  }
+  finally {
+    document.getElementById("number").value = "";
+  }
+}
+</script>
+  <script>
+    var myGamePiece;
+var myObstacles = [];
+var myScore;
+
+function startGame() {
+  myGamePiece = new component(30, 30, "red", 10, 160);
+  myScore = new component("30px", "Consolas", "black", 280, 40, "text");
+  myGameArea.start();
+
+function updateGameArea() {
+  var x, height, gap, minHeight, maxHeight, minGap, maxGap;
+  for (i = 0; i < myObstacles.length; i += 1) {
+    if (myGamePiece.crashWith(myObstacles[i])) {
+      myGameArea.stop();
+      return;
+    }
+  }
+  myGameArea.clear();
+  myGameArea.frameNo += 1;
+  if (myGameArea.frameNo == 1 || everyinterval(150)) {
+    x = myGameArea.canvas.width;
+    minHeight = 20;
+    maxHeight = 200;
+    height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
+    minGap = 50;
+    maxGap = 200;
+    gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
+    myObstacles.push(new component(10, height, "green", x, 0));
+    myObstacles.push(new component(10, x - height - gap, "green", x, height + gap));
+  }
+  for (i = 0; i < myObstacles.length; i += 1) {
+    myObstacles[i].speedX = -1;
+    myObstacles[i].newPos();
+    myObstacles[i].update();
+  }
+  myScore.text = "SCORE: " + myGameArea.frameNo;
+  myScore.update();
+  myGamePiece.newPos();
+  myGamePiece.update();
+}
+
+
+  </script>
+   <h5  >  
+            MAX_Value
+        </h5>  
+     
+       
+        <p id = "max" >
+        </p>
+         
+        <button id="buton2" onclick = "gfg_Run()">  
+            Click here
+        </button>
+       
+         
+       <script>
+    var st='[1,2,3,7]';
+    document.write("After click we find maximale value of numbers" + st.toString());          
+
+            var el_up = document.getElementById("MAx");
+        var el_down = document.getElementById("max");
+             
+            var array = [{ "y":1,"y":2,"y":3,"y":7}]
+                 
+                 
+            el_up.innerHTML = JSON.stringify(array);
+             
+            function gfg_Run() {
+                el_down.innerHTML = "Maximum value of y is y = " +  
+                Math.max.apply(Math, array.map(function(o) {
+                    return o.y;  
+                }));
+            }          
+        </script> <script>
+function clickCounteer()
+{
+if(typeof(Storage)!=="undefined")
+{
+    if (sessionStorage.clickcount)
+    {
+    sessionStorage.clickcount=Number(sessionStorage.clickcount)+1;
+    }
+  else
+    {
+    sessionStorage.clickcount=1;
+    }
+  document.getElementById("result1").innerHTML="Keni klikuar butonin " + sessionStorage.clickcount + " herë ne kete sesion.";
+  }
+else
+  {
+  document.getElementById("result1").innerHTML="Sorry, your browser does not support web storage...";
+  }
+}
+
+</script>
+<script>
+  function clickCounter()
+{
+if(typeof(Storage)!=="undefined")
+{
+    if (localStorage.clickcount)
+    {
+    localStorage.clickcount=Number(localStorage.clickcount)+1;
+    }
+  else
+    {
+    localStorage.clickcount=1;
+    }
+  document.getElementById("result2").innerHTML="Keni klikuar butonin " + localStorage.clickcount + " herë ne kete sesion.";
+  }
+else
+  {
+  document.getElementById("result2").innerHTML="Sorry, your browser does not support web storage...";
+  }
+}
+
+</script>
+</head>
+<body>
+<div id="result1"></div>
+<p><button id="b1"onclick="clickCounteer()" type="button">Click!</button></p>
+
+<div id="result2"></div>
+<p>Click the button to see what happens</p>
+<p>Close the window and try again.</p>
+<p><button id="b2" onclick="clickCounter()" type="button">Click!</button></p>
+
+
+</div>
+
+
+  <p id="daate"></p>
+ 
+<script>
+var date = new Date(99,10,11,12,32,23,23);
+
+
+document.getElementById("daate").innerHTML = date.toDateString();
+</script>
+<div class="d6">
+
+<p id="regex" >Click the button to search for "g" in a string.</p>
+<p >"If you cannot do great things,do small things in a great way!"</p>
+<button onclick="myFunction()">Kliko</button>
+<script>
+function myFunction()
+{
+var st = "If you cannot do great things,do small things in a great way!";
+var reg = /g/;
+var result = st.match(reg);
+document.getElementById("regex").innerHTML=result;
+}
+</script>
+
+<div>
+<p id="regEx" >Click the button to search for "i" in a string.</p>
+<p >"If you cannot do great things,do small things in a great way!"</p>
+<button onclick="Function()">Kliko</button>
+<script>
+function Function()
+{
+var str = "If you cannot do great things,do small things in a great way!";
+var regg = /i/;
+var result = str.match(regg);
+document.getElementById("regEx").innerHTML=result;
+}
+
+</script>
+
+  <p >"If you cannot do great things,do small things in a great way!"</p>
+</div>
+<script>
+var reg2=new RegExp("e");
+document.write(reg2.test("If you cannot do great things,do small things in a great way!"));
+</script>
+<body>
+  <p >"If you cannot do great things,do small things in a great way!"</p>
+<script>
+var reg1=new RegExp("e");
+document.write(reg1.exec("If you cannot do great things,do small things in a great way!"));
+</script>
+
+</div>
+<script>
+setInterval(
+function () {
+  var randomColor = Math.floor(Math.random()*16777215).toString(16);
+  document.body.style.backgroundColor = "#"+randomColor;
+},1000);
+</script>
+
+
+</body>
+</html>
