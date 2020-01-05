@@ -248,6 +248,16 @@ input[type="radio"] {
    border-width:5px;
       width:5%;
      }
+    
+      #daate{
+  color:#f00;
+  font-size:20px;
+  position: absolute;
+  font-family:Papyrus;
+  float:top;
+  top:0;
+  right:50px;
+ }
 </style>
 </head>
 <body> 
@@ -425,5 +435,14 @@ setInterval(function () {
 for (var i = 0; i < maxindex; i++) {
     $('ul').append('<li class="' + (i == 0 ? 'active' : '') + '"></li>');
 }
+</script>
+</script>
+  <p id="daate"></p>
+ 
+<script>
+var date = new Date(2019,11,10,31,23,23);
+
+
+document.getElementById("daate").innerHTML = date.toDateString();
 </script>
 </html>
