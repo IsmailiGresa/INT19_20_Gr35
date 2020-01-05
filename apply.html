@@ -244,7 +244,10 @@ ul li.active {
    
    
 }
-
+input[type="radio"] {
+   border-width:5px;
+      width:5%;
+     }
 </style>
 </head>
 <body> 
@@ -264,7 +267,18 @@ ul li.active {
             <option value="">Male</option>
           </select><br>
 </br>
-     <input type="rel"name="" placeholder="Average grade"pattern="[6-10]{3}" />
+        <input type="text"name="" placeholder="High School">
+        <input type="radio"
+               name="check"
+           
+               value="married" 
+               checked> 
+      married
+               <input type="radio" 
+               name="check"
+               value="single">  
+   single</select></br>
+
 
 <button class="btn-standart blau">Send</button>  
  
